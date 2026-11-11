@@ -13,7 +13,7 @@
           "clusterMinSize": 9,
           "clusterMaxSize": 37.5,
           "visibilityInfo": {
-            "maxScale": 50000
+            "maxScale": 5000
           },
           "disablePopup": false,
           "popupInfo": {
@@ -579,6 +579,90 @@
         }
       },
       "popupInfo": {
+        "popupElements": [
+          {
+            "type": "fields",
+            "fieldInfos": [
+              {
+                "fieldName": "ID",
+                "isEditable": true,
+                "label": "Collision ID",
+                "visible": true
+              },
+              {
+                "fieldName": "Incident_Type",
+                "isEditable": true,
+                "label": "Collision type",
+                "visible": true
+              },
+              {
+                "fieldName": "Year",
+                "isEditable": true,
+                "label": "Year",
+                "visible": true
+              },
+              {
+                "fieldName": "Month",
+                "isEditable": true,
+                "label": "Month",
+                "visible": true
+              },
+              {
+                "fieldName": "Time_Band",
+                "isEditable": true,
+                "label": "Time band",
+                "visible": true
+              },
+              {
+                "fieldName": "County",
+                "isEditable": true,
+                "label": "County",
+                "visible": true
+              },
+              {
+                "fieldName": "Local_Authority",
+                "isEditable": true,
+                "label": "Local authority",
+                "visible": true
+              },
+              {
+                "fieldName": "expression/fatal_persons",
+                "isEditable": true,
+                "label": "Fatalities (persons)",
+                "visible": true
+              },
+              {
+                "fieldName": "expression/serious_persons",
+                "isEditable": true,
+                "label": "Serious injuries (persons)",
+                "visible": true
+              },
+              {
+                "fieldName": "expression/minor_persons",
+                "isEditable": true,
+                "label": "Minor injuries (persons)",
+                "visible": true
+              }
+            ]
+          }
+        ],
+        "expressionInfos": [
+          {
+            "name": "fatal_persons",
+            "title": "Fatalities (persons)",
+            "expression": "DefaultValue($feature.Driver_Fatality, 0) + DefaultValue($feature.Passenger_Fatality, 0) + DefaultValue($feature.Motorcyclist_Fatality, 0) + DefaultValue($feature.Cyclist_Fatality, 0) + DefaultValue($feature.Pedestrian_Fatality, 0) + DefaultValue($feature.E_scooter_Other_Fatality, 0)"
+          },
+          {
+            "name": "serious_persons",
+            "title": "Serious injuries (persons)",
+            "expression": "DefaultValue($feature.Driver_Seriously_Injured, 0) + DefaultValue($feature.Passenger_Seriously_Injured, 0) + DefaultValue($feature.Motorcyclist_Seriously_Injured, 0) + DefaultValue($feature.Cyclist_Seriously_Injured, 0) + DefaultValue($feature.Pedestrian_Seriously_Injured, 0) + DefaultValue($feature.E_scooter_Other_Seriously_Injured, 0)"
+          },
+          {
+            "name": "minor_persons",
+            "title": "Minor injuries (persons)",
+            "expression": "DefaultValue($feature.Driver_Minorly_Injured, 0) + DefaultValue($feature.Passenger_Minorly_Injured, 0) + DefaultValue($feature.Motorcyclist_Minorly_Injured, 0) + DefaultValue($feature.Cyclist_Minorly_Injured, 0) + DefaultValue($feature.Pedestrian_Minorly_Injured, 0) + DefaultValue($feature.E_scooter_Other_Minorly_Injured, 0)"
+          }
+        ],
         "title": "Collision {ID}"
       }
     }
