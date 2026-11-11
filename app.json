@@ -177,8 +177,8 @@
       {
         "id": "collision-explorer",
         "label": "Road collision dashboard filters and charts",
-        "bundlePath": "./runtime/behaviors/collision-explorer-daaaf4b946212558.js",
-        "sourceSha256": "daaaf4b946212558a52e397a60740fbec84626cfe2e15243ba1d9a78d484aeba",
+        "bundlePath": "./runtime/behaviors/collision-explorer-9f420d28f13ebc34.js",
+        "sourceSha256": "9f420d28f13ebc345502ef0d53096f4683c53da73d20ad76994bc3c89681c0d1",
         "modulePaths": [],
         "config": {
           "layerId": "1a1ca774ef8-layer-2",
@@ -240,7 +240,7 @@
         ],
         "ownedLayerIds": [],
         "interactions": [],
-        "installedAt": "2026-11-11T12:36:54.156Z"
+        "installedAt": "2026-11-11T12:43:11.143Z"
       }
     ]
   },
